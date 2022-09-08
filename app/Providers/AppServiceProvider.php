@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Services\PriceTagUpdater;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        PriceTagUpdater::perform();
+
+        # For some reason this is't working as expected.
+        # Hope I'll have some tome to look into it later.
+        // $this->app->singleton('HelpSpot\API', function ($app) {
+        //     return PriceTagUpdater::perform();
+        // });
     }
 }

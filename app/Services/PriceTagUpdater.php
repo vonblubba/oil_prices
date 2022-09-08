@@ -10,7 +10,7 @@ class PriceTagUpdater
 {
   const OIL_PRICE_TAGS_URL = 'https://datahub.io/core/oil-prices/r/brent-daily.json';
 
-  public function perform()
+  public static function perform()
   {
     $response = Http::get(self::OIL_PRICE_TAGS_URL);
     if ($response->status() != 200) { return false; }
