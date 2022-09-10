@@ -17,7 +17,7 @@ Disclaimer: as I said during our phone call, I'm currently working on Ruby On Ra
 
 ## Project details
 - I implemented a *PriceTagUpdater* service that retrieves the remote price tags JSON and stores it in the local db. It is executed at application startup.
-- I implemented a *GetOilPriceTrendSpec* class and registered a route on `/v1/oil` endpoint for RPC
+- I implemented a *GetOilPriceTrend* class and registered a route on `/v1/oil` endpoint for RPC
 
 ## Running the app
 App can be run either with `php artisan serve` (assuming a local PHP 8.1 enviroment is installed), or with docker running `docker compose up`. In either case, app will be available at `127.0.0.1:8000`
