@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Services\PriceTagUpdater;
+use App;
 
 class AppServiceProvider extends ServiceProvider
 {
